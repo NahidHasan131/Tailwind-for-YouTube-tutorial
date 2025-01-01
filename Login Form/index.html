@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login form</title>
+  <!-- Tailwind css cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
+  <!-- Box icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="font-poppins min-h-screen bg-[url('https://static.vecteezy.com/system/resources/thumbnails/030/353/225/small_2x/beautiful-night-sky-background-ai-generated-photo.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center">
+  
+  <div class="w-[420px] py-8 px-10 text-white border-2 border-white/20 rouneded-lg shadow-[0_0_10px_rgba(255,255,255,0.2)] backdrop-blur-lg">
+
+    <h1 class="text-4xl text-center font-bold mb-8">Login</h1>
+
+    <!-- User Inpur -->
+     <div class="relative mb-8">
+        <input type="text" placeholder="UserName" required class="w-full h-12 bg-transparent border-2 border-white/20 rounded-[40px] pl-5 pr-11 py-5 outline-none placeholder-white text-base">
+        <i class='bx bxs-user absolute right-5 top-1/2 -translate-y-1/2'></i>
+     </div>
+
+     <!-- password -->
+     <div class="relative mb-5">
+      <input type="password" placeholder="Password" required class="w-full h-12 bg-transparent border-2 border-white/20 rounded-[40px] pl-5 pr-11 py-5 outline-none placeholder-white text-base">
+      <i class='bx bxs-lock-alt absolute right-5 top-1/2 -translate-y-1/2'></i>
+     </div>
+
+     <!-- Remember & Forgot -->
+      <div class="flex justify-between items-center mb-5  text-base">
+        <label class="flex items-center">
+          <input class="accent-white mr-1" type="checkbox">Remember me
+        </label>
+        <a class="hover:underline font-semibold" href="#">Forgot Password</a>
+      </div>
+
+      <!-- login Button -->
+       <button class="w-full h-11 bg-white text-gray-800 border-none rounded-[40px] cursor-pointer shadow-[0_0_10px_rgba(255,255,255,0.2)]" type="submit">Login</button>
+
+       <!-- Register link -->
+        <div class="text-base text-center mt-4 mb-4">
+          <p>Don't have an account? 
+            <a class="font-semibold hover:underline" href="#">Register</a>
+          </p>
+        </div>
+
+  </div>
+
+</body>
+</html>
