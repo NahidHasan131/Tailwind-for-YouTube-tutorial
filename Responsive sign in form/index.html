@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in form</title>
+  <!-- Tailwind css cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="font-poppins bg-gray-100 flex justify-center items-center min-h-screen">
+  <!-- Content Wrapper -->
+   <div class="flex flex-col space-y-0 bg-white shadow-2xl rounded-xl md:flex-row md:space-y-0">
+
+    <!-- Left side -->
+     <div class="flex flex-col justify-center py-10 px-11 md:px-14">
+        <h1 class="text-3xl font-bold mb-3">Sign in</h1>
+        <p class="font-light text-gray-500 mb-5">Welcome back! Please sign in first</p>
+
+        <!-- Email -->
+         <div class="relative pb-4">
+            <span class="text-lg">Email:</span>
+            <input type="email" placeholder="Enter your email" class="w-full h-11 mt-1 pl-5 pr-11 py-5 border border-gray-500 rounded-3xl placeholder:text-gray-500 placeholder:font-light outline-none">
+            <i class='bx bx-envelope absolute right-5 top-11'></i>
+         </div>
+          <!-- Password -->
+          <div class="relative">
+            <span class="text-lg"> Password:</span>
+            <input type="password" placeholder="Enter your password" class="w-full h-11 mt-1 pl-5 pr-11 py-5 border border-gray-500 rounded-3xl placeholder:text-gray-500 placeholder:font-light outline-none">
+            <i class='bx bx-lock-alt absolute right-5 top-11'></i>
+          </div>
+
+          <!-- remember & forgot -->
+           <div class="flex justify-between w-full py-4">
+            <label >
+                <input type="checkbox" class="mr-1 accent-gray-500">Remember me
+            </label>
+            <a href="#" class="font-semibold hover:underline">Forgot Password</a>
+           </div>
+
+           <!-- Sign in button -->
+            <button type="submit" class="w-full h-12 border border-gray-500 rounded-3xl text-black hover:bg-gray-800 hover:text-white font-bold">Sign in</button>
+
+            <!-- Register -->
+             <div class="text-center text-gray-400 pt-3">
+                Don't have an account? 
+                <a href="#" class="font-bold hover:underline text-black">Sign up</a>
+             </div>
+
+     </div>
+    
+     <!-- right side -->
+      <div>
+        <img src="./image.jpg" alt="image" class="w-[400px] h-full hidden rounded-2xl md:block object-cover">
+      </div>
+
+   </div>
+</body>
+</html>
