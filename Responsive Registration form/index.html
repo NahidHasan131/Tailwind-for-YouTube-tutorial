@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - WindCoder App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Box Icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-gray-900 min-h-screen">
+  
+    <!-- navigation -->
+     <nav class="text-white flex justify-between items-center max-w-7xl mx-auto p-6 mb-10">
+        <div class="flex items-center space-x-2">
+            <div>
+                <img src="./logo.png" class="w-9 h-9 rounded-full" alt="">
+            </div>
+            <span class="text-lg font-semibold">WindCoder.</span>
+        </div>
+        <div class="flex space-x-8">
+            <a href="#" class="hover:text-gray-400 transition hover:underline">Home</a>
+            <a href="#" class="hover:text-gray-400 transition hover:underline">Join</a>
+        </div>
+     </nav>
+
+     <!-- Main COntent -->
+      <div class="max-w-7xl mx-auto p-6 mb-10 flex flex-col md:flex-row gap-8">
+
+        <!-- Left Content -->
+         <div class="flex-1"> 
+
+            <div class="mb-8">
+                <span class="text-gray-400 text-sm tracking-wide">START FOR FREE</span>
+                <h1 class="text-4xl text-white font-bold mt-2 mb-4">Create Account.</h1>
+                <p class="text-gray-400 ">Already a Member? 
+                    <a href="#" class="text-gray-200 font-semibold hover:underline">Log In</a>
+                </p>
+            </div>
+
+            <!-- Form -->
+             <form action="" class="space-y-4">
+                <div class="flex gap-4">
+                    <div class="flex-1 relative">
+                        <input type="text" placeholder="First Name" value="Wind" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg outline-none placeholder-gray-500 px-4 py-3 text-white">
+                        <i class='bx bx-id-card absolute text-white right-5 top-3 text-lg'></i>
+                    </div>
+                    <div class="flex-1 relative">
+                        <input type="text" placeholder="Last Name" value="Coder" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg outline-none placeholder-gray-500 px-4 py-3 text-white">
+                        <i class='bx bx-id-card absolute text-white right-5 top-3 text-lg'></i>
+                    </div>
+                </div>
+                <div class="relative">
+                    <input type="mail" placeholder="Enter your Email" value="thewindcoder@gmail.com" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg outline-none placeholder-gray-500 px-4 py-3 text-white">
+                    <i class='bx bx-envelope absolute text-white right-5 top-3 text-lg'></i>
+                </div>
+                <div class="relative">
+                    <input type="password" placeholder="Enter your Password" value="........" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg outline-none placeholder-gray-500 px-4 py-3 text-white">
+                    <i class='bx bx-low-vision absolute text-white right-5 top-3 text-lg'></i>
+                </div>
+                <div class="flex justify-between">
+                    <button type="button" class="bg-gray-800/50 px-6 py-3 hover:bg-gray-700/50 transition text-white font-semibold rounded-lg">Change Method</button>
+                    <button type="submit" class="px-6 py-3 text-white border border-gray-500 rounded-lg transition hover:bg-gray-800/50 font-semibold">Create Account</button>
+                </div>
+             </form>
+
+         </div>
+
+         <!-- Right Content -->
+          <div class="flex-2 hidden md:block">
+            <img src="./Right-side-banner.png" class="w-[680px]" alt="">
+          </div>
+
+      </div>
+
+    
+
+     
+
+    
+
+</body>
+</html>
