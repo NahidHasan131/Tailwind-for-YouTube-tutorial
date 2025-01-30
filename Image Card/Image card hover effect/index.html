@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Interactive Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Boxicons CDN -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+
+    <h1 class="text-center mb-10 w-full font-bold text-3xl text-gray-900">Responsive Animated Image Card Design</h1>
+    <div class="container mx-auto flex flex-col sm:flex-wrap sm:flex-row sm:justify-center gap-6">
+        <!-- Card 1 -->
+         <div class="max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden group">
+            <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba" alt="Nature" class="w-full h-[300px] object-cover transition-all duration-700 ease-in-out group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute bottom-0 w-full p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex items-center justify-between text-white mb-2">
+                            <div class="flex items-center space-x-2">
+                                <i class="bx bx-camera text-lg"></i>
+                                <span class="text-sm font-medium">Nature</span>
+                            </div>
+                            <button class="p-2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                                <i class="bx bx-heart text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Mountain Serenity</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Discover breathtaking views of nature's finest landscapes, where every moment tells a story.</p>
+                <div class="mt-4 flex items-center justify-between ">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32" alt="photographer" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-sm text-gray-600 font-medium">John Doe</span>
+                    </div>
+                    <span class="text-xs text-gray-500">2 min read</span>
+                </div>
+            </div>
+         </div>
+         <!-- Card 2 -->
+         <div class="max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden group">
+            <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b" alt="Nature" class="w-full h-[300px] object-cover transition-all duration-700 ease-in-out group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute bottom-0 w-full p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex items-center justify-between text-white mb-2">
+                            <div class="flex items-center space-x-2">
+                                <i class="bx bxs-tree text-lg"></i>
+                                <span class="text-sm font-medium">Forest</span>
+                            </div>
+                            <button class="p-2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                                <i class="bx bx-heart text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Forest Escape</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Reconnect with nature in a serene forest environment that offers peace and adventure.</p>
+                <div class="mt-4 flex items-center justify-between ">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg">
+                        </div>
+                        <span class="text-sm text-gray-600 font-medium">Jane smith</span>
+                    </div>
+                    <span class="text-xs text-gray-500">3 min read</span>
+                </div>
+            </div>
+         </div>
+         <!-- Card 3 -->
+         <div class="max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden group">
+            <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Nature" class="w-full h-[300px] object-cover transition-all duration-700 ease-in-out group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="absolute bottom-0 w-full p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex items-center justify-between text-white mb-2">
+                            <div class="flex items-center space-x-2">
+                                <i class="bx bx-sun text-lg"></i>
+                                <span class="text-sm font-medium">Beach</span>
+                            </div>
+                            <button class="p-2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                                <i class="bx bx-heart text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">Beach Bliss</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Relax by the shore and bask in the golden hues of a perfect beach getaway.</p>
+                <div class="mt-4 flex items-center justify-between ">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="photographer" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-sm text-gray-600 font-medium">Sam williamson</span>
+                    </div>
+                    <span class="text-xs text-gray-500">4 min read</span>
+                </div>
+            </div>
+         </div>
+    </div>
+
+</body>
+</html>
