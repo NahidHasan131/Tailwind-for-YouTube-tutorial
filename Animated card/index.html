@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Magic Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @property --rotate{
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+    }
+    .magic-border::before, 
+    .magic-border::after{
+        content: "";
+        position: absolute;
+        inset: -4px;
+        background: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+        border-radius: 8px;
+        animation: spin 2.5s linear infinite;
+        z-index: 1;
+    }
+    .magic-border::after{
+        filter: blur(30px);
+        opacity: 0.3;
+    }
+    @keyframes spin{
+        0%{ --rotate: 0deg;}
+        100%{--rotate: 360deg;}
+    }
+
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+    <div class="w-[300px] h-[400px] relative p-[3px] magic-border">
+        <div class="bg-slate-900 w-full h-full rounded-lg relative z-10 flex flex-col items-center justify-center p-8 text-cyan-400 transition-all duration-300 hover:text-white hover:shadow-[0_0_8px_rgba(93,220,255,0.4)]">
+            <!-- Icon -->
+             <i class='bx bxs-magic-wand text-5xl font-bold mb-4 transition-transform duration-300 hover:scale-110'></i>
+
+             <!-- title -->
+              <h1 class="text-2xl font-bold mb-4">Magic Card</h1>
+
+              <!-- Description -->
+               <p class="text-sm mb-6">Hover over me to see the magic</p>
+
+               <!-- Icon -->
+                <div class="flex gap-4">
+                    <i class="bx bx-star transition-transform duration-300 hover:scale-110"></i>
+                    <i class="bx bx-star transition-transform duration-300 hover:scale-110"></i>
+                    <i class="bx bx-star transition-transform duration-300 hover:scale-110"></i>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
