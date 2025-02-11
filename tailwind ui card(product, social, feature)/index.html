@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <title>Tailwind UI Cards</title>
+</head>
+<body class="min-h-screen bg-gray-100 p-8"> 
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Card -->
+         <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Product" class="w-full h-48 object-cover">
+                <span class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-medium">-20%</span>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-1 mb-1">
+                    <i class="bx bxs-star text-yellow-400 text-lg"></i>
+                    <i class="bx bxs-star text-yellow-400 text-lg"></i>
+                    <i class="bx bxs-star text-yellow-400 text-lg"></i>
+                    <i class="bx bxs-star text-yellow-400 text-lg"></i>
+                    <i class="bx bxs-star text-yellow-400 text-lg"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Premium Sneakers</h3>
+                <div class="mt-2 flex items-baseline gap-2">
+                    <span class="text-2xl font-bold text-gray-900">$79.99</span>
+                    <span class="text-sm text-gray-500 line-through">$99.99</span>
+                </div>
+                <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
+                    <i class="bx bx-cart text-lg"></i>Add to Cart
+                </button>
+            </div>
+         </div>
+         
+         <!-- Profile Card -->
+          <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group text-center p-8">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="profile" class="w-24 h-24 rounded-full mx-auto border-4 border-white object-cover mb-4 group-hover:scale-105 transition-transform duration-300">
+            <h3 class="text-white text-xl font-semibold mb-2">Sarah Anderson</h3>
+            <p class="text-blue-100 mb-4">Senior Product Designer</p>
+            <div class="flex justify-center gap-4 mb-6">
+                <button class="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300"><i class="bx bxl-github text-white text-xl w-7 h-5"></i></button>
+                <button class="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300"><i class="bx bxl-twitter text-white text-xl w-7 h-5"></i></button>
+                <button class="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300"><i class="bx bxl-linkedin text-white text-xl w-7 h-5"></i></button>
+            </div>
+            <button class="w-full bg-white text-purple-600 py-2 px-4 rounded-lg font-medium hover:bg-opacity-90 transition-colors">View Profile</button>
+          </div>
+
+          <!-- Feature Card -->
+           <div class="relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group p-8">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400 to-blue-500 opacity-10 rounded-bl-full group-hover:scale-105 transition-transform duration-500"></div>
+            <div class="relative">
+                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="bx bxs-bolt text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Quick Setup</h3>
+                <p class="text-gray-600 mb-6">Get started in minutes with our intuitive setup process. No complex configurations needed.</p>
+                <button class="flex items-center gap-2 text-green-600 font-medium group-hover:gap-3 transition-all duration-300">
+                    Learn More
+                    <i class="bx bx-right-arrow-alt text-lg"></i>
+                </button>
+            </div>
+           </div>
+
+    </div>
+</body>
+</html>
