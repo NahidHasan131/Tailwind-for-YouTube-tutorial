@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Slider</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-Montserrat bg-gray-50">
+   <!-- Header -->
+    <div class="max-w-7xl mx-auto px-8">
+        <header class="h-16 mt-8 border-b-2">
+            <ul class="flex items-center justify-between md:justify-around">
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Home</a></li>
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Shop</a></li>
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Accessories</a></li>
+                <li class="w-full md:w-1/4 text-center">
+                    <h1 class="text-3xl font-oswald uppercase">E-commerce</h1>
+                </li>
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Collections</a></li>
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Brands</a></li>
+                <li class="font-black hidden md:block"><a href="#" class="text-sm uppercase tracking-[2px]">Contact</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <!-- Slider -->
+    <div class="max-w-5xl mx-auto px-4 py-16">
+        <!-- Slider Container -->
+         <div id="slider" class="relative h-[500px] overflow-hidden rounded-xl shadow-lg">
+            <!-- Slides -->
+             <div class="slides-container h-full">
+                <!-- Slide 1 -->
+                 <div class="absolute inset-0 transition-all duration-500 ease-in-out opacity-100 visible">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1421809313281-48f03fa45e9f?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/30"></div>
+                        <div class="relative h-full flex flex-col justify-end p-8 text-white">
+                            <h2 class="text-4xl font-semibold mb-2">Winter Collection</h2>
+                            <p class="text-lg mb-4">Discover Our latest arrivals</p>
+                            <button class="bg-white text-black px-6 py-3 rounded-full w-fit font-semibold hover:bg-gray-100 transition-colors">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+
+                 <!-- Slide 2 -->
+                 <div class="absolute inset-0 transition-all duration-500 ease-in-out opacity-0 invisible">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1416838375725-e834a83f62b7?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/30"></div>
+                        <div class="relative h-full flex flex-col justify-end p-8 text-white">
+                            <h2 class="text-4xl font-semibold mb-2">Summer Essentials</h2>
+                            <p class="text-lg mb-4">Stay cool and stylish</p>
+                            <button class="bg-white text-black px-6 py-3 rounded-full w-fit font-semibold hover:bg-gray-100 transition-colors">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+
+                 <!-- Slide 3 -->
+                 <div class="absolute inset-0 transition-all duration-500 ease-in-out opacity-0 invisible">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1453974336165-b5c58464f1ed?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/30"></div>
+                        <div class="relative h-full flex flex-col justify-end p-8 text-white">
+                            <h2 class="text-4xl font-semibold mb-2">Accessories</h2>
+                            <p class="text-lg mb-4">Complete your look</p>
+                            <button class="bg-white text-black px-6 py-3 rounded-full w-fit font-semibold hover:bg-gray-100 transition-colors">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+
+             <!-- Navigation Button -->
+              <div class="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full p-2">
+                <button id="prevBtn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+                    <i class="bx bx-chevron-left text-2xl"></i>
+                </button>
+                <div class="px-4 font-semibold">
+                    <span id="currentSlide">1</span>
+                    <span>/</span>
+                    <span id="totalSlides">3</span>
+                </div>
+                <button id="nextBtn" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+                    <i class="bx bx-chevron-right text-2xl"></i>
+                </button>
+              </div>
+         </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+        // Get elements
+        const slides = document.querySelector('.slides-container').children;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentSlideE1 = document.getElementById('currentSlide');
+        const totalSlidesE1 = document.getElementById('totalSlides');
+
+        //set initial Values
+        let currentIndex = 0;
+        totalSlidesE1.textContent = slides.length;
+
+        //Change slide function
+        function changeSlide(direction){
+            //Hide Current slide
+            slides[currentIndex].className ='absolute inset-0 transition-all duration-500 ease-in-out opacity-0 invisible';
+
+            //Update index
+            if(direction == 'next'){
+                currentIndex = (currentIndex + 1) % slides.length;
+            }else{
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            }
+
+            // Show new slide
+            slides[currentIndex].className = 'absolute inset-0 transition-all duration-500 ease-in-out opacity-100 visible';
+            currentSlideE1.textContent = currentIndex + 1;
+        }
+
+        // Add click events
+        prevBtn.addEventListener('click', ()=> changeSlide('prev'));
+        nextBtn.addEventListener('click', ()=> changeSlide('next'));
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e)=>{
+            if(e.key === 'Arrowleft') changeSlide('prev');
+            if(e.key === 'ArrowRight') changeSlide('next');
+        });
+
+        // Auto slide every 3 seconds
+        setInterval(()=> changeSlide('next'), 3000)
+    </script>
+
+</body>
+</html>
