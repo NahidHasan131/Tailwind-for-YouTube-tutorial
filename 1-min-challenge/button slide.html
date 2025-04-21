@@ -6,7 +6,10 @@
   <title>button slide</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
+  <button class="text-white font-bold bg-red-500 px-10 py-4 rounded-full relative group overflow-hidden">
+    Hover Me 
+    <span class="absolute left-0 bottom-0 w-full h-1 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+  </button>
 </body>
 </html>
