@@ -6,7 +6,17 @@
   <title>Count down</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900 text-white">
 
+  <h1 id="countdown" class="text-4xl font-bold">10</h1>
+
+  <script>
+    let count = 10;
+    const inteval = setInterval(() =>{
+      document.getElementById('countdown').textContent = count;
+      count--;
+      if(count < 0) clearInterval(inteval);
+    }, 1000);
+  </script>
 </body>
 </html>

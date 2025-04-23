@@ -6,7 +6,15 @@
   <title>clock</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
+  
+  <h1 id="clock" class="bg-gray-100 px-10 py-5 rounded-md font-bold text-3xl"></h1>
+
+  <script>
+    setInterval(() => {
+      document.getElementById('clock').textContent = new Date().toLocaleTimeString();
+    }, 1000);
+  </script>
 
 </body>
 </html>
