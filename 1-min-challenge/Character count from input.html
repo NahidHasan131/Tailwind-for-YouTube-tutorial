@@ -6,7 +6,14 @@
   <title>Character count from input</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="flex items-center justify-center min-h-screen bg-gray-900">
+  <input type="text" id="textInput" oninput="countChar()" class="w-60 p-4 rounded-l-lg outline-none">
+  <p id="counter" class="px-6 py-4 bg-cyan-700 hover:bg-cyan-800 text-white font-semibold rounded-r-lg">0</p>
 
+  <script>
+    function countChar(){
+      document.getElementById("counter").textContent = `${document.getElementById("textInput").value.length}`
+    }
+  </script>
 </body>
 </html>
