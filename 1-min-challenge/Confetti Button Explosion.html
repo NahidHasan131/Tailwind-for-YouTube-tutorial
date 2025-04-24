@@ -5,8 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Confetti Button Explosion </title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fall { to { transform: translateY(100vh) rotate(360deg); opacity: 0;}}
+  </style>
 </head>
-<body>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
 
+  <button onclick="boom()" class="text-white font-bold text-3xl">🎉 Celebrate</button>
+  
+  <script>
+    function boom() {
+      for(let i = 0; i<50; i++) {
+        const c = document.createElement('div');
+        c.style = `position: fixed; left:${Math.random()*100}vw; top:${Math.random()*100}vh; width: 6px; height: 6px; background:hsl(${Math.random()*360}, 100%, 50%); 
+        animation: fall 1s ease-out forwards;`;
+        document.body.append(c);
+        setTimeout(() => {
+          c.remove();
+        }, 1000);
+      }
+    }
+  </script>
 </body>
 </html>
