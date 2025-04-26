@@ -6,9 +6,12 @@
   <title>Reveal Image on Hover</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-  
+  <div class="w-80 h-60 relative overflow-hidden rounded-xl group">
+    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="cat" class="absolute inset-0 w-full h-full object-cover filter blur-lg scale-105 transition duration-700 ease-in-out group-hover:scale-100 group-hover:blur-0">
+    <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition duration-700 ease-in-out"></div>
+  </div>
 
 </body>
 </html>
