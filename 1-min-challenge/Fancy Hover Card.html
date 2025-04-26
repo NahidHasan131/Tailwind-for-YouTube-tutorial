@@ -6,9 +6,12 @@
   <title>Fancy Hover Card</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-    
+    <div class="group relative p-6 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl shadow-xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-blue-500/40">
+      <div class="absolute inset-0 rounded-xl border border-blue-500 opacity-0 group-hover:opacity-100 blur-sm animate-pulse pointer-events-none"></div>
+      <h2 class="text-2xl font-bold relative z-10 text-white">Hover Me!</h2>
+    </div>
 
 </body>
 </html>
