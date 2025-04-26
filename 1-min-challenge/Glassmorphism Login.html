@@ -6,9 +6,17 @@
     <title>Glassmorphism Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[url('https://c1.wallpaperflare.com/preview/529/66/412/night-stars-light-night-sky.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center text-white">
    
-    
+    <div class="bg-white/10 backdrop-blur-md px-8 py-14 rounded-xl shadow-lg max-w-sm w-full border border-white/20">
+        <h2 class="text-3xl font-bold text-center mb-6">Sign in</h2>
+        <form action="">
+            <input type="text" placeholder="Name" class="w-full p-3 mb-4 bg-white/20 rounded-lg placeholder-gray-300 focus:outline-none">
+            <input type="email" placeholder="Email" class="w-full p-3 mb-4 bg-white/20 rounded-lg placeholder-gray-300 focus:outline-none">
+            <input type="password" placeholder="Password" class="w-full p-3 mb-4 bg-white/20 rounded-lg placeholder-gray-300 focus:outline-none">
+            <button class="w-full p-3 bg-blue-500 hover:bg-blue-600 font-bold rounded-lg">Login</button>
+        </form>
+    </div>
 
 </body>
 </html>
