@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Glitch Text Effect</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes glitch {
+      0% {text-shadow: 2px 2px red;}
+      50% {text-shadow: -2px -2px blue;}
+      100% {text-shadow: 2px 2px red;}
+    }
+    .animate-glitch {animation: glitch 0.2s infinite;}
+  </style>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-   
+   <h1 class="animate-glitch font-bold text-3xl">Glitch Text Effect</h1>
 
 </body>
 </html>
