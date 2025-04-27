@@ -6,9 +6,22 @@
   <title>Mouse Trail Effect</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-900">
 
-  
+    <script>
+      document.addEventListener("mousemove", function(e) {
+        let dot = document.createElement("div");
+        dot.style.width = "10px";
+        dot.style.height = "10px";
+        dot.style.position = "absolute";
+        dot.style.top = `${e.clientY}px`;
+        dot.style.left = `${e.clientX}px`;
+        dot.style.backgroundColor = "cyan";
+        dot.style.borderRadius = "50%";
+        document.body.appendChild(dot);
+        setTimeout(()=> dot.remove(), 500);
+      });
+    </script>
   
 </body>
 </html>

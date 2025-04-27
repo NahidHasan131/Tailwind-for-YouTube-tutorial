@@ -6,9 +6,11 @@
   <title>live text preview </title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900 text-white">
 
-    
-  
+    <label class="mr-10">Font Size: <span id="val">16</span>px</label>
+    <input type="range" min="10" max="40" value="16" oninput="val.innerText = this.value; demo.style.fontSize = this.value+'px'">
+    <p id="demo" class="ml-10">Live text preview!</p>
+
 </body>
 </html>
