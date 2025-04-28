@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moving Text Marquee Effect</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<body>
+  <style>
+    @keyframes marquee {
+      0% {transform: translateX(100%);}
+      100% {transform: translateX(-100%);}
+    }
+    .animate-marquee {animation: marquee 5s linear infinite;}
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-900 text-white">
 
-  
+  <div class="overflow-hidden whitespace-nowrap">
+    <p class="inline-block text-2xl font-bold animate-marquee">🚀 Welcome to The Wind Coder! 🔥 Keep Learning! 💡</p>
+  </div>
 
 </body>
 </html>
