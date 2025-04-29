@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neon Border Animation </title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes neon {
+      0%, 100% {box-shadow: 0 0 10px blue, 0 0 40px cyan;}
+      50% { box-shadow: 0 0 20px cyan, 0 0 60px blue;}
+    }
+    .animate-neon { animation: neon 1s infinite alternate;}
+  </style>
 </head>
-<body>
+<body class="min-h-screen bg-gray-900 flex items-center justify-center text-white">
 
-
+  <div class="w-64 h-32 flex items-center justify-center text-xl font-bold border-4 border-blue-500 rounded-lg animate-neon">
+    NEON BORDER
+  </div>
 
 </body>
 </html>
