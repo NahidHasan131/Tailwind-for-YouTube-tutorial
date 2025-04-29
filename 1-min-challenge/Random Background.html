@@ -6,9 +6,17 @@
   <title>Random Background Color Changer</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-  
+  <button id="colorBtn" class="text-white bg-cyan-500 px-8 py-4 rounded-lg font-bold">
+    Change Color!
+  </button>
+
+  <script>
+    document.getElementById('colorBtn').addEventListener("click", function(){
+      document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`
+    })
+  </script>
 
 </body>
 </html>

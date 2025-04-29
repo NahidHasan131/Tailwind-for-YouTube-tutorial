@@ -6,9 +6,20 @@
   <title>Random color plate </title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-700 text-white">
  
+  <button onclick="gen()" class="font-semibold text-3xl mr-10">🎨 Generate</button>
+  <div id="colors" class="flex gap-2 mt-2"></div>
 
+  <script>
+    function gen() {
+      colors.innerHTML = '';
+      for(let i = 0; i<5; i++){
+        const c = '#'+Math.floor(Math.random()*16777215).toString(16);
+        colors.innerHTML += `<div style = "background: ${c}" class="w-12 h-12" title="${c}"></div>`;
+      }
+    }
+  </script>
 
 </body>
 </html>

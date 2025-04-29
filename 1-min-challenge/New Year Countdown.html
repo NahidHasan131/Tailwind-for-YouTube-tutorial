@@ -6,9 +6,29 @@
   <title>New Year Countdown</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900 text-white">
 
-  
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-4">🎉 Countdown to New Year 🎉</h1>
+    <div id="countDown" class="text-2xl font-mono"></div>
+  </div>
+
+  <script>
+    const countDown = document.getElementById('countDown');
+
+    setInterval(() =>{
+      const now = new Date();
+      const newYear = new Date(now.getFullYear() + 1,0,1);
+      const diff = newYear - now;
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      countDown.textContent = `${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+  </script>
 
 </body>
 </html>
