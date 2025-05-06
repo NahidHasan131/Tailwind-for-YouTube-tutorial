@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Animation Challenge</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes blink {
+            50% {opacity: 0;}
+        }
+        .after\:animate-blink::after {animation: blink 1s infinite;}
+    </style>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-    
+    <div class="text-white font-mono text-2xl font-semibold">
+        <span id="typing-text" class="relative after:content-['|'] after:animate-blink"></span>
+    </div>
+
+    <script>
+        const text = "Welcome to The Wind Coder!";
+        let index = 0;
+        function typeText() {
+            if(index < text.length) {
+                document.getElementById("typing-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText,150);
+            }
+        }
+        typeText();
+    </script>
   
 </body>
 </html>
