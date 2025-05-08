@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wavy Text Animation </title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes wave {
+      0%, 100%{ transform: translateY(0);}
+      50% { transform: translateY(-10px);}
+    }
+    .animate-wave{animation: wave 1s infinite ease-in-out; display: inline-block;}
+    .delay-100{animation-delay: 0.1s;}
+    .delay-200{animation-delay: 0.2s;}
+    .delay-300{animation-delay: 0.3s;}
+    .delay-400{animation-delay: 0.4s;}
+  </style>
 </head>
-<body>
+<body class="flex min-h-screen justify-center items-center bg-gray-900 text-white ">
 
-
+  <h1 class="text-4xl font-bold flex">
+    <span class="inline-block animate-wave">H</span>
+    <span class="inline-block animate-wave delay-100">E</span>
+    <span class="inline-block animate-wave delay-200">L</span>
+    <span class="inline-block animate-wave delay-300">L</span>
+    <span class="inline-block animate-wave delay-400">O</span>
+  </h1>
 
 </body>
 </html>
